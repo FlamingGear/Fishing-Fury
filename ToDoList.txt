@@ -20,5 +20,7 @@ Hooks reel in objects from where released
 Hooks take time to process fish
 Points based on what was fished
 
+Fish / Obstacle Spawners Algo
+
 Timer System
 Sun moves as time runs out
