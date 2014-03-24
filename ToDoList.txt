@@ -1,0 +1,24 @@
+Conner - 
+Upgrade System Art Assets
+Ship displaying based on Upgrade System
+Upgrade System Menu
+High Scores System
+
+Other- 
+Sound Assets
+Sun Asset
+Menus
+	Options
+	Fish Stocks
+
+Money System
+Scores from each run compiling for each "Game's" score
+
+Hooks moving when dragged
+Hooks gathering objects when they collide
+Hooks reel in objects from where released
+Hooks take time to process fish
+Points based on what was fished
+
+Timer System
+Sun moves as time runs out
