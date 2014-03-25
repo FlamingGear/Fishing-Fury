@@ -30,7 +30,7 @@ public class ShipBob : MonoBehaviour
             iterator -= (4 * Math.PI);
         }
 
-        position = new Vector2(-5, yOffset);
+        position = new Vector2(transform.position.x, yOffset);
 	}
 
     //Called at the rate of the fixed framerate, better for updating physics engines,

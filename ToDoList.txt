@@ -6,15 +6,42 @@ High Scores System
 
 Other- 
 Sound Assets
+	Background Music
+	Sea
+	Metal Clink
+	coin
+	Button Click
 Sun Asset
+
 Menus
+	Main Menu
+	-Logo
+
 	Options
+	-Enable/Disable Music & SFX
+
 	Fish Stocks
+	-Map with a circle that changes size
+
+	TripResults
+	-Links to comp.summ.
+	-Shows money made this trip
+	-Shows money lost this trip
+
+	company summary
+	-shows the boat in current state
+	-shows the money
+	-links to upgrades
+	-links to stocks
+	-starts game
+
+	HighScores & Upgradesss - Wait.
 
 Money System
 Scores from each run compiling for each "Game's" score
 
-Hooks moving when dragged
+Hooks Firing
+Hooks rendering if exist
 Hooks gathering objects when they collide
 Hooks reel in objects from where released
 Hooks take time to process fish
