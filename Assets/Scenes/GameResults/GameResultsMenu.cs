@@ -3,22 +3,24 @@ using System.Collections;
 
 public class GameResultsMenu : MonoBehaviour 
 {
+	public GUIStyle buttonTexture;
+
     void OnGUI()
     {
         const int buttonWidth = 256;
-        const int buttonHeight = 32;
+		const int buttonHeight = 60;
 
         //Draw StartGame Button
-        if (GUI.Button(
-                new Rect(   Screen.width / 4 - (buttonWidth / 2),
-                            6 * (Screen.height / 9) - (buttonHeight / 2),
-                            buttonWidth, buttonHeight), "Play Game"))
-        {
-            //Button Do Method
-            Application.LoadLevel("CompanySummary");
-        }
+		if (GUI.Button(
+			new Rect(   Screen.width / 4 - (buttonWidth / 2),
+		         8 * (Screen.height / 9) - (buttonHeight / 2),
+		         buttonWidth, buttonHeight), "High Scores", buttonTexture))
+		{
+			//Button Do Method
+			Application.LoadLevel("HighScores");
+		}
 
-        //Draw HighScores Button
+       /* //Draw HighScores Button
         if (GUI.Button(
                 new Rect(   Screen.width / 4 - (buttonWidth / 2),
                             8 * (Screen.height / 9) - (buttonHeight / 2),
@@ -46,6 +48,6 @@ public class GameResultsMenu : MonoBehaviour
         {
             //Button Do Method
             Application.Quit();
-        }
+        } */
     }
 }

@@ -3,49 +3,52 @@ using System.Collections;
 
 public class CompanySummaryMenu : MonoBehaviour 
 {
+	public GUIStyle buttonTexture;
+
     void OnGUI()
     {
         const int buttonWidth = 256;
-        const int buttonHeight = 32;
+        const int buttonHeight = 60;
 
         //Draw StartGame Button
         if (GUI.Button(
                 new Rect(   Screen.width / 4 - (buttonWidth / 2),
                             6 * (Screen.height / 9) - (buttonHeight / 2),
-                            buttonWidth, buttonHeight), "Play Game"))
+                            buttonWidth, buttonHeight), "Upgrade Boat", buttonTexture))
         {
             //Button Do Method
-            Application.LoadLevel("CompanySummary");
+            Application.LoadLevel("UpgradesScreen");
         }
 
         //Draw HighScores Button
         if (GUI.Button(
-                new Rect(   Screen.width / 4 - (buttonWidth / 2),
-                            8 * (Screen.height / 9) - (buttonHeight / 2),
-                            buttonWidth, buttonHeight), "High Scores"))
+                new Rect(  3 * (Screen.width) / 4 - (buttonWidth / 2),
+                           6 * (Screen.height / 9) - (buttonHeight / 2),
+                            buttonWidth, buttonHeight), "Go Fishing", buttonTexture))
         {
             //Button Do Method
-            Application.LoadLevel("HighScores");
+            Application.LoadLevel("Game");
         }
 
-        //Draw Options Button
+         //Draw Options Button
         if (GUI.Button(
-                new Rect(   3 * (Screen.width / 4) - (buttonWidth / 2),
-                            6 * (Screen.height / 9) - (buttonHeight / 2),
-                            buttonWidth, buttonHeight), "Options"))
+                new Rect(   Screen.width / 4 - (buttonWidth / 2),
+                            8 * (Screen.height / 9) - (buttonHeight / 2),
+                            buttonWidth, buttonHeight), "Check Fish Stocks", buttonTexture))
         {
             //Button Do Method
-            Application.LoadLevel("Options");
+            Application.LoadLevel("FishStocks");
         }
+
 
         //Draw Exit Button
         if (GUI.Button(
                 new Rect(   3 * (Screen.width / 4) - (buttonWidth / 2),
                             8 * (Screen.height / 9) - (buttonHeight / 2),
-                            buttonWidth, buttonHeight), "Exit Game"))
+                            buttonWidth, buttonHeight), "Main Menu", buttonTexture))
         {
             //Button Do Method
-            Application.Quit();
+			Application.LoadLevel("MainMenu");
         }
     }
 }

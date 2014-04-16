@@ -3,16 +3,18 @@ using System.Collections;
 
 public class MenuScript : MonoBehaviour 
 {
+	public GUIStyle buttonTexture;
+
     void OnGUI()
     {
         const int buttonWidth = 256;
-        const int buttonHeight = 32;
+        const int buttonHeight = 60;
 
         //Draw StartGame Button
         if (GUI.Button(
                 new Rect(   Screen.width / 4 - (buttonWidth / 2),
                             6 * (Screen.height / 9) - (buttonHeight / 2),
-                            buttonWidth, buttonHeight), "Play Game"))
+		         buttonWidth, buttonHeight), "Play Game", buttonTexture))
         {
             //Button Do Method
             Application.LoadLevel("CompanySummary");
@@ -22,9 +24,9 @@ public class MenuScript : MonoBehaviour
         if (GUI.Button(
                 new Rect(   Screen.width / 4 - (buttonWidth / 2),
                             8 * (Screen.height / 9) - (buttonHeight / 2),
-                            buttonWidth, buttonHeight), "High Scores"))
-        {
-            //Button Do Method
+		         buttonWidth, buttonHeight), "High Scores", buttonTexture))
+		{
+			//Button Do Method
             Application.LoadLevel("HighScores");
         }
 
@@ -32,9 +34,9 @@ public class MenuScript : MonoBehaviour
         if (GUI.Button(
                 new Rect(   3 * (Screen.width / 4) - (buttonWidth / 2),
                             6 * (Screen.height / 9) - (buttonHeight / 2),
-                            buttonWidth, buttonHeight), "Options"))
-        {
-            //Button Do Method
+		         buttonWidth, buttonHeight), "Options", buttonTexture))
+		{
+			//Button Do Method
             Application.LoadLevel("Options");
         }
 
@@ -42,9 +44,9 @@ public class MenuScript : MonoBehaviour
         if (GUI.Button(
                 new Rect(   3 * (Screen.width / 4) - (buttonWidth / 2),
                             8 * (Screen.height / 9) - (buttonHeight / 2),
-                            buttonWidth, buttonHeight), "Exit Game"))
-        {
-            //Button Do Method
+		         buttonWidth, buttonHeight), "Exit Game", buttonTexture))
+		{
+			//Button Do Method
             Application.Quit();
         }
     }

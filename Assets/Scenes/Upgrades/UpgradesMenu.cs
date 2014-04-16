@@ -3,16 +3,18 @@ using System.Collections;
 
 public class UpgradesMenu : MonoBehaviour 
 {
+	public GUIStyle buttonTexture;
+
     void OnGUI()
     {
         const int buttonWidth = 256;
-        const int buttonHeight = 32;
+        const int buttonHeight = 60;
 
         //Draw StartGame Button
         if (GUI.Button(
-                new Rect(   Screen.width / 4 - (buttonWidth / 2),
-                            6 * (Screen.height / 9) - (buttonHeight / 2),
-                            buttonWidth, buttonHeight), "Play Game"))
+                new Rect(  Screen.width / 4 - (buttonWidth / 2),
+                           6 * (Screen.height / 9) - (buttonHeight / 2),
+                            buttonWidth, buttonHeight), "Company Summary", buttonTexture))
         {
             //Button Do Method
             Application.LoadLevel("CompanySummary");
@@ -20,14 +22,16 @@ public class UpgradesMenu : MonoBehaviour
 
         //Draw HighScores Button
         if (GUI.Button(
-                new Rect(   Screen.width / 4 - (buttonWidth / 2),
-                            8 * (Screen.height / 9) - (buttonHeight / 2),
-                            buttonWidth, buttonHeight), "High Scores"))
+                new Rect(  3 * Screen.width / 4 - (buttonWidth / 2),
+                           6 * (Screen.height / 9) - (buttonHeight / 2),
+                            buttonWidth, buttonHeight), "Go Fishing", buttonTexture))
         {
             //Button Do Method
-            Application.LoadLevel("HighScores");
+            Application.LoadLevel("Game");
         }
 
+
+		/*
         //Draw Options Button
         if (GUI.Button(
                 new Rect(   3 * (Screen.width / 4) - (buttonWidth / 2),
@@ -46,6 +50,6 @@ public class UpgradesMenu : MonoBehaviour
         {
             //Button Do Method
             Application.Quit();
-        }
+        }*/
     }
 }
